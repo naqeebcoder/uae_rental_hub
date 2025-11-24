@@ -1,0 +1,73 @@
+/* Prevent page overflow */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Fix shapes from causing scroll */
+.services-one {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Ensure background shapes don't extend the page height */
+.services-one__shape-1,
+.services-one__shape-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    max-width: 100%;
+    z-index: 0;
+}
+
+/* Optional: Adjust shapes if needed */
+.services-one__shape-1 {
+    top: -20px;
+}
+
+.services-one__shape-2 {
+    bottom: -20px;
+}
+
+/* Service boxes */
+.services-one__single {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.services-one__single:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.services-one__icon span {
+    font-size: 40px;
+    color: #ff6b00;
+}
+
+.services-one__title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.services-one__text {
+    font-size: 15px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Animation placeholders (WOW.js or AOS) */
+.wow {
+    visibility: visible !important;
+}
